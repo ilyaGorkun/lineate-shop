@@ -1,0 +1,10 @@
+FROM golang:latest
+
+WORKDIR /backend
+
+COPY ./backend /backend
+
+RUN go mod download
+RUN go build ./cmd/api/main.go
+EXPOSE 8080
+ENTRYPOINT ./main
