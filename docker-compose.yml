@@ -20,6 +20,8 @@ services:
       env_file: .env
       tty: true
       init: true
+      volumes:
+      - ./:/backend
       # depends_on:
       #   - postgis
       networks:
